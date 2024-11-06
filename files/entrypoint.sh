@@ -1,3 +1,4 @@
 #!/bin/sh
+echo $PLAYLIST_URL > /opt/playlist-url
 cd /music
-spotdl https://open.spotify.com/playlist/3bekyB0bsVU8IrfieIWjb9?si=c227be3ba5b34b96 
+spotdl "$PLAYLIST_URL"
