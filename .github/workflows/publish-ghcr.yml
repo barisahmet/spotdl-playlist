@@ -40,4 +40,4 @@ jobs:
           push: true
           outputs: type=image,name=target,annotation-index.org.opencontainers.image.description=AGH multi-arch image
           tags: |
-            ghcr.io/${REPO}:latest
+            ghcr.io/${{ env.REPO }}:latest
