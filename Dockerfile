@@ -1,7 +1,8 @@
 FROM alpine:latest
 
 RUN apk add --no-cache python3 pipx
-RUN pipx install spotdl
+RUN pipx install --global spotdl
+RUN spotdl --download-ffmpeg
 
 WORKDIR /tmp
 
