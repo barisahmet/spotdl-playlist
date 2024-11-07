@@ -4,14 +4,16 @@ Uses [spotdl](https://github.com/spotDL/spotify-downloader) Python library to do
 > [!NOTE]
 > It automatically handles spotdl library updates. No update necessary.
 
-Example:
+Example `docker-compose.yml`:
 ```
-spotdl:
-  container_name: spotdl
-  restart: unless-stopped
-  image: ghcr.io/barisahmet/spotdl-playlist:latest
-  volumes:
-    - /path/to/downloads:/music
-  environment:
-    - PLAYLIST_URL: "https://[spotify playlist url here]"
+version: "3"
+services:
+  spotdl:
+    container_name: spotdl
+    restart: unless-stopped
+    image: ghcr.io/barisahmet/spotdl-playlist:latest
+    volumes:
+      - /path/to/folder:/music
+    environment:
+      - PLAYLIST_URL: "https://[spotify playlist url here]"
 ```
