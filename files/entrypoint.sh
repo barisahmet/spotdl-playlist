@@ -1,6 +1,5 @@
 #!/bin/sh
-echo $PLAYLIST_URL > /opt/playlist-url
 cd /music
-spotdl "$PLAYLIST_URL"
+spotdl sync "$PLAYLIST_URL" --save-file /opt/sync.spotdl
 
 tail -f /dev/null
