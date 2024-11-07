@@ -4,9 +4,9 @@ RUN apk add --no-cache python3 pipx
 RUN pipx install --global spotdl
 RUN spotdl --download-ffmpeg
 
-COPY files/entrypoint.sh /etc/periodic/hourly/spotdl.sh
-COPY files/update_spotdl.sh /etc/periodic/daily/update_spotdl.sh
-COPY files/entrypoint.sh /opt/entrypoint.sh
+COPY files/spotdl.sh /etc/periodic/hourly/
+COPY files/update_spotdl.sh /etc/periodic/daily/
+COPY files/entrypoint.sh /opt/
 
 RUN chmod +x /etc/periodic/hourly/spotdl.sh
 RUN chmod +x /opt/entrypoint.sh
