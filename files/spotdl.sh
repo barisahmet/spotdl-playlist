@@ -1,4 +1,3 @@
 #!/bin/sh
-playlist_url=`cat /opt/playlist-url`
 cd /music
-spotdl "$playlist_url"
+spotdl sync /opt/sync.spotdl
