@@ -13,6 +13,8 @@ RUN chmod +x /opt/entrypoint.sh
 RUN chmod +x /etc/periodic/daily/update_spotdl.sh
 RUN mkdir /music
 
+WORKDIR /music
+
 VOLUME ["/music"]
 
 CMD ["/opt/entrypoint.sh"]
