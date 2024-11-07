@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 alpine:latest
+FROM alpine:latest
 
 RUN apk add --no-cache python3 pipx
 RUN pipx install --global spotdl
