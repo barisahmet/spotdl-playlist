@@ -15,5 +15,5 @@ services:
     volumes:
       - /path/to/folder:/music
     environment:
-      - PLAYLIST_URL: "https://[spotify playlist url here]"
+      PLAYLIST_URL: "https://[spotify playlist url here]"
 ```
