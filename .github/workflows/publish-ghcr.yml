@@ -1,6 +1,4 @@
 
-# This is a basic workflow to help you get started with Actions
-
 name: Docker Image CI for GHCR
 
 on:
@@ -33,8 +31,8 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           context: .
-          platforms: linux/amd64,linux/arm64,linux/ppc64le,linux/386,linux/arm/v6,linux/arm/v7
+          platforms: linux/amd64
           push: true
-          outputs: type=image,name=target,annotation-index.org.opencontainers.image.description=AGH multi-arch image
+          outputs: type=image,name=target,annotation-index.org.opencontainers.image.description=spotdl-playlist image
           tags: |
             ghcr.io/${{ github.repository }}:latest  
