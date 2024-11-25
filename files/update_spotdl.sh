@@ -1,2 +1,3 @@
 #!/bin/sh
-pipx upgrade --global spotdl
+
+pipx upgrade spotdl 

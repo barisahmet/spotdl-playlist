@@ -17,3 +17,13 @@ services:
     environment:
       PLAYLIST_URL: "https://[spotify playlist url here]"
 ```
+## Environment Variables
+
+- `PLAYLIST_URLS`: Comma-separated list of Spotify playlist URLs to sync.
+- `SYNC_INTERVAL`: Interval for syncing playlists (e.g., `hourly`, `daily`).
+- `ENABLE_LOGS`: Set to `true` to enable logging, `false` to disable logging.
+
+## Volumes
+
+- `/music`: Directory to store downloaded music.
+- `/logs`: Directory to store log files. 
