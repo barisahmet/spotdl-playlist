@@ -4,7 +4,6 @@ RUN apk add --no-cache python3 pipx
 RUN pipx install --global spotdl
 RUN spotdl --download-ffmpeg
 
-COPY files/spotdl.sh /etc/periodic/hourly/
 COPY files/update_spotdl.sh /etc/periodic/daily/
 COPY files/entrypoint.sh /opt/
 COPY files/healthcheck.sh /opt/
