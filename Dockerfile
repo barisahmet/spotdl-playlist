@@ -9,7 +9,6 @@ COPY files/update_spotdl.sh /etc/periodic/daily/
 COPY files/entrypoint.sh /opt/
 COPY files/healthcheck.sh /opt/
 
-RUN chmod +x /etc/periodic/hourly/spotdl.sh
 RUN chmod +x /opt/entrypoint.sh
 RUN chmod +x /etc/periodic/daily/update_spotdl.sh
 RUN chmod +x /opt/healthcheck.sh
