@@ -35,4 +35,9 @@ jobs:
           push: true
           outputs: type=image,name=target,annotation-index.org.opencontainers.image.description=spotdl-playlist image
           tags: |
+<<<<<<< HEAD
             ghcr.io/${{ github.repository }}:latest  
+=======
+            ghcr.io/${{ github.repository }}:latest  
+
+>>>>>>> e89b0d1919e6eabf0d6a4e3348dbc443c4eff51e
