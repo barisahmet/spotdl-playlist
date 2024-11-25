@@ -14,8 +14,11 @@ services:
     image: ghcr.io/barisahmet/spotdl-playlist:latest
     volumes:
       - /path/to/folder:/music
+      - /path/to/logs:/logs
     environment:
-      PLAYLIST_URL: "https://[spotify playlist url here]"
+      PLAYLIST_URLS: "https://[spotify playlist url here],https://[another spotify playlist url here]"
+      ENABLE_LOGS: "true"
+      SYNC_INTERVAL: daily
 ```
 ## Environment Variables
 
