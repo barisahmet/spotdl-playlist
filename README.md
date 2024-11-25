@@ -18,7 +18,7 @@ services:
     environment:
       PLAYLIST_URLS: "https://[spotify playlist url here],https://[another spotify playlist url here]"
       ENABLE_LOGS: "true"
-      SYNC_INTERVAL: daily
+      SYNC_INTERVAL: "daily"
 ```
 ## Environment Variables
 
