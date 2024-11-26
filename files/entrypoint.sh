@@ -10,9 +10,9 @@ sync_playlists() {
   # Sync each playlist
   for PLAYLIST_URL in $PLAYLIST_URLS; do
     if [ "$ENABLE_LOGS" = "true" ]; then
-      spotdl sync "$PLAYLIST_URL" --save-file /opt/sync.spotdl --log-file /logs/spotdl.log
+      spotdl sync "$PLAYLIST_URL" --save-file /opt/sync.spotdl --log-file /logs/spotdl.log --output "{list-name}/{artists} - {title}.{output-ext}"
     else
-      spotdl sync "$PLAYLIST_URL" --save-file /opt/sync.spotdl
+      spotdl sync "$PLAYLIST_URL" --save-file /opt/sync.spotdl --output "{list-name}/{artists} - {title}.{output-ext}"
     fi
   done
 }
