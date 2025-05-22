@@ -1,5 +1,5 @@
 # spotdl-playlist
-Uses [spotdl](https://github.com/spotDL/spotify-downloader) python library to download a Spotify playlist to a designated folder and automatically keeps it synchronized. I employ it within my Home Assistant environment to enable uninterrupted local playback on Sonos devices during internet outages (yes, internet outages is still a thing in Turkey in 2025).
+Uses [spotdl](https://github.com/spotDL/spotify-downloader) python library to download a Spotify playlist to a designated folder and automatically keeps it synchronized. I, personally employ it within my Home Assistant environment to enable uninterrupted local playback on Sonos devices during internet outages (yes, internet outages is still a thing in Turkey in 2025).
 
 > [!NOTE]
 > It automatically handles spotdl library updates. No update necessary.
