@@ -19,12 +19,14 @@ services:
       PLAYLIST_URLS: "https://[spotify playlist url here],https://[another spotify playlist url here]"
       ENABLE_LOGS: "true"
       SYNC_INTERVAL: "daily"
+      INCLUDE_LIKED_SONGS: "true"
 ```
 ## Environment Variables
 
 - `PLAYLIST_URLS`: Comma-separated list of Spotify playlist URLs to sync.
 - `SYNC_INTERVAL`: Interval for syncing playlists (e.g., `hourly`, `daily`).
 - `ENABLE_LOGS`: Set to `true` to enable logging, `false` to disable logging.
+- `INCLUDE_LIKED_SONGS`: Set to `true` to download user's liked songs, `false` to skip (default is `false`).
 
 ## Volumes
 

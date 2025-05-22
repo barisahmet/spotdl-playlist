@@ -3,6 +3,9 @@
 # Default sync interval to hourly if not set
 SYNC_INTERVAL=${SYNC_INTERVAL:-hourly}
 
+# Default to not including liked songs
+INCLUDE_LIKED_SONGS=${INCLUDE_LIKED_SONGS:-false}
+
 # Read playlist URLs from environment variable
 PLAYLIST_URLS=$(echo "$PLAYLIST_URLS" | tr ',' ' ')
 
@@ -15,6 +18,15 @@ sync_playlists() {
       spotdl sync "$PLAYLIST_URL" --save-file /opt/sync.spotdl --output "{list-name}/{artists} - {title}.{output-ext}"
     fi
   done
+  
+  # Sync liked songs if enabled
+  if [ "$INCLUDE_LIKED_SONGS" = "true" ]; then
+    if [ "$ENABLE_LOGS" = "true" ]; then
+      spotdl sync "https://open.spotify.com/collection/tracks" --save-file /opt/sync-liked.spotdl --log-file /logs/spotdl-liked.log --output "Liked Songs/{artists} - {title}.{output-ext}"
+    else
+      spotdl sync "https://open.spotify.com/collection/tracks" --save-file /opt/sync-liked.spotdl --output "Liked Songs/{artists} - {title}.{output-ext}"
+    fi
+  fi
 }
 
 # Initial sync
